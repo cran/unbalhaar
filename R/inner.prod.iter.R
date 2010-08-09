@@ -1,4 +1,4 @@
-"inner.prod.iter" <-
+inner.prod.iter <-
 function(x) {
 n <- length(x)
 I.plus <- I.minus <- I.prod <- rep(0, n-1)

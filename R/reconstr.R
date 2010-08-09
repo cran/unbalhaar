@@ -1,4 +1,4 @@
-"reconstr" <-
+reconstr <-
 function(buh) {
 J <- length(buh$tree)
 n <- buh$tree[[1]][5,1]

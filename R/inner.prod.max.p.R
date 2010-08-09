@@ -1,4 +1,4 @@
-"inner.prod.max.p" <-
+inner.prod.max.p <-
 function(x, p = 0.8) {
 ipi <- inner.prod.iter(x)
 n <- length(ipi)

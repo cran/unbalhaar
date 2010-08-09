@@ -1,4 +1,4 @@
-"uh" <-
+uh <-
 function(x, criterion = inner.prod.max) {
 n <- length(x)
 sigma <- mad((x[2:n] - x[1:(n-1)])/sqrt(2))

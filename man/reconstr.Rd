@@ -1,8 +1,8 @@
 \name{reconstr}
 \alias{reconstr}
-\title{Reconstruct an Unbalanced Haar decomposition}
+\title{Reconstruct a top-down Unbalanced Haar decomposition}
 \description{
-Reconstructs a vector from its Unbalanced Haar decomposition stored in an object returned
+Reconstructs a vector from its top-down Unbalanced Haar decomposition stored in an object returned
 by \code{best.unbal.haar} or \code{hard.thresh}.
 }
 \usage{
@@ -15,7 +15,7 @@ reconstr(buh)
     the inverse Unbalanced Haar transform of \code{buh}
 }
 \author{Piotr Fryzlewicz}
-\seealso{\code{\link{best.unbal.haar}}, \code{\link{hard.thresh}}}
+\seealso{\code{\link{best.unbal.haar}}, \code{\link{hard.thresh}}, \code{\link{reconstr.bu}}}
 \examples{
 x <- rnorm(1000)
 x.uh <- best.unbal.haar(x)

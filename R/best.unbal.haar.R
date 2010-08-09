@@ -1,4 +1,4 @@
-"best.unbal.haar" <-
+best.unbal.haar <-
 function(x, criterion = inner.prod.max) {
 n <- length(x)
 if (n < 2) stop("Input vector too short")
@@ -21,7 +21,7 @@ for (i in 1:no.parent.coeffs) {
 if (tree[[j]][4,i] - tree[[j]][3,i] >= 1) {
 no.child.coeffs <- no.child.coeffs + 1
 tree[[j+1]] <- matrix(c(tree[[j+1]], matrix(0, 5, 1)), 5, no.child.coeffs)
-tree[[j+1]][1,no.child.coeffs] <- 2*i-1
+tree[[j+1]][1,no.child.coeffs] <- 2*tree[[j]][1,i]-1
 ipi <- inner.prod.iter(x[(tree[[j]][3,i]):(tree[[j]][4,i])])
 ind.max <- criterion(x[(tree[[j]][3,i]):(tree[[j]][4,i])])
 tree[[j+1]][2,no.child.coeffs] <- ipi[ind.max]
@@ -32,7 +32,7 @@ tree[[j+1]][4,no.child.coeffs] <- ind.max + tree[[j]][3,i] - 1
 if (tree[[j]][5,i] - tree[[j]][4,i] >= 2) {
 no.child.coeffs <- no.child.coeffs + 1
 tree[[j+1]] <- matrix(c(tree[[j+1]], matrix(0, 5, 1)), 5, no.child.coeffs)
-tree[[j+1]][1,no.child.coeffs] <- 2*i
+tree[[j+1]][1,no.child.coeffs] <- 2*tree[[j]][1,i]
 ipi <- inner.prod.iter(x[(tree[[j]][4,i] + 1):(tree[[j]][5,i])])
 ind.max <- criterion(x[(tree[[j]][4,i] + 1):(tree[[j]][5,i])])
 tree[[j+1]][2,no.child.coeffs] <- ipi[ind.max]

@@ -1,4 +1,4 @@
-"unbal.haar.vector" <-
+unbal.haar.vector <-
 function(a) {
 n <- a[3] - a[1] + 1
 m <- a[2] - a[1] + 1

@@ -1,4 +1,4 @@
-"hard.thresh" <-
+hard.thresh <-
 function(buh, sigma = 1) {
 J <- length(buh$tree)
 n <- buh$tree[[1]][5,1]

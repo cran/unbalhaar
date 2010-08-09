@@ -1,6 +1,6 @@
 \name{hard.thresh}
 \alias{hard.thresh}
-\title{ Hard thresholding  of an Unbalanced Haar decomposition}
+\title{Hard thresholding of a top-down Unbalanced Haar decomposition}
 \description{
 Presented with an object returned by \code{best.unbal.haar}, the function
 sets to zero those Unbalanced Haar coefficients which fall below a certain threshold
@@ -17,7 +17,7 @@ hard.thresh(buh, sigma = 1)
     a thresholded object, of the same class as \code{buh}
 }
 \author{Piotr Fryzlewicz}
-\seealso{\code{\link{best.unbal.haar}}}
+\seealso{\code{\link{best.unbal.haar}}, \code{\link{hard.thresh.bu}}}
 \examples{
 x <- rnorm(1000)
 x.uh <- best.unbal.haar(x)
